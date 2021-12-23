@@ -11,5 +11,6 @@
         <TextBox Name="NameTextBox" Margin="0,0,0,10"></TextBox>
         <Button Name="GreetButton" Click="GreetButton_Click" Margin="0,0,0,10">Say Hello!</Button>
         <TextBlock Name="MessageLabel" Margin="0,0,0,10"></TextBlock>
+        <Button Name="RightArrow" Click="Next" Margin="0,0,0,10">Next></Button>
     </StackPanel>
 </Window>
