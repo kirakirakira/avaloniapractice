@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" Width="300" Height="200"
+        mc:Ignorable="d" Width="300" Height="300"
         Padding="10"
         x:Class="MyApp.MainWindow"
         Title="MyApp">
@@ -10,7 +10,13 @@
         <TextBlock Name="NameLabel" Margin="0,0,0,10">What is your name?</TextBlock>
         <TextBox Name="NameTextBox" Margin="0,0,0,10"></TextBox>
         <Button Name="GreetButton" Click="GreetButton_Click" Margin="0,0,0,10">Say Hello!</Button>
-        <TextBlock Name="MessageLabel" Margin="0,0,0,10"></TextBlock>
-        <Button Name="RightArrow" Click="Next" Margin="0,0,0,10">Next></Button>
+        <TextBlock Name="QuestionText" Margin="0,0,0,10"></TextBlock>
+        <TextBox Name="AnswerBox" Margin="0,0,0,10"></TextBox>
+        <TextBlock Name="AnswerText" Margin="0,0,0,10"></TextBlock>
+        <StackPanel Orientation="Horizontal">
+            <Button Name="NextQuestion" Click="NextQuestion" Margin="0,0,0,10">Next></Button>
+            <Button Name="Submit" Click="Submit" Margin="0,0,0,10">Submit</Button>
+        </StackPanel>
+        <TextBlock Name="Score" Margin="0,0,0,10"></TextBlock>
     </StackPanel>
 </Window>

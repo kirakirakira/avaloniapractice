@@ -20,9 +20,6 @@ namespace MyApp
             questions = JsonConvert.DeserializeObject<Questions>
                 (File.ReadAllText("questions.json"));
 
-            Console.WriteLine(questions?.Version);
-            Console.WriteLine(questions?.QuestionPairs?[0]?.Question);
-
             BuildAvaloniaApp()
               .StartWithClassicDesktopLifetime(args);
         }

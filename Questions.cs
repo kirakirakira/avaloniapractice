@@ -10,7 +10,7 @@ namespace MyApp
 
         public List<QuestionPair?>? QuestionPairs { get; set; }
 
-        public int counter { get; set; }
+        public int counter { get; set; } = -1;
         public void IncrementCounter()
         {
             counter++;
