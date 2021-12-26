@@ -36,12 +36,18 @@ namespace MyApp
 
         public void Next(object sender, RoutedEventArgs e)
         {
-            // Program.questions.IncrementCounter();
+            if (Program.questions != null)
+            {
+                Program.questions.IncrementCounter();
 
-            var textBlock = this.FindControl<TextBlock>("NameLabel");
-            textBlock.Text = "Your next word is";
+                var textBlock = this.FindControl<TextBlock>("NameLabel");
+                textBlock.Text = "Your next word is " + Program.questions.counter;
 
-
+                if (Program.questions.counter >= 0 && Program.questions.counter < Program.questions.QuestionPairs?.Count)
+                {
+                    textBlock.Text = Program.questions.QuestionPairs?[Program.questions.counter]?.Question;
+                }
+            }
         }
     }
 }
